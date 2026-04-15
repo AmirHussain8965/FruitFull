@@ -7,258 +7,328 @@
     <title>FRUITFUL - FAQs</title>
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
-    <header class="header_section">
+    <header class="site-header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="assets/imgs/logo.svg" alt="Fruitful Logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
-                        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navContent">
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="studies.html">Studies</a></li>
-                            <li class="nav-item"><a class="nav-link" href="sponsers.html">Sponsors & CROs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                        </ul>
-                        <div class="nav_btns">
-                            <a href="contact.html" class="text-decoration-none">
-                                <button type="button" class="btn_primary" style="border: none;">Join a Study</button>
-                            </a>
-                        </div>
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/imgs/logo.svg" alt="Fruitful Clinical Research">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="siteNav">
+                    <ul class="navbar-nav mx-auto nav-links">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="studies.html">Studies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sponsers.html">Sponsors & CROs</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="faqs.html">FAQs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="contact.html" class="btn-primary">Join a Study</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-
     <main>
-        <section class="faq_hero_section section_padding">
-            <div class="container text-center">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8" data-aos="fade-up">
-                        <span class="hero_badge mb-4">SUPPORT & HELP</span>
-                        <h1 class="hero_title fw-bold" style="font-size: 56px;">Frequently Asked<br><span
-                                class="text_red">Questions</span></h1>
-                        <p class="hero_text mx-auto mt-4" style="max-width: 600px; font-size: 18px;">Helping you
-                            understand clinical research. We're here to provide clarity on every step of your medical
-                            research journey.</p>
-                    </div>
+        <section class="faq-hero">
+            <div class="container">
+                <div class="faq-hero-content" data-aos="fade-up">
+                    <span class="section-kicker color-red">SUPPORT & HELP</span>
+                    <h1 class="hero-title">Frequently Asked<br><span class="highlight-red">Questions</span></h1>
+                    <p class="hero-description mx-auto">Helping you understand clinical research. We're here to provide clarity on every step of your medical research journey.</p>
                 </div>
             </div>
         </section>
 
-        <section class="faq_content_section section_padding bg-white">
+        <section class="faq-main-content">
             <div class="container">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="sub_heading text_green mb-2">COMMON QUESTIONS</span>
-                    <h2 class="section_title fw-bold mb-3">Everything You Need to Know</h2>
-                    <p class="text_muted mx-auto" style="max-width: 600px;">Find answers to common queries regarding
-                        clinical trials, participant eligibility, and our rigorous safety protocols.</p>
-                </div>
+                <div class="row layout-gap">
+                    
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="nav flex-column nav-pills faq-tabs" id="faq-v-pills-tab" role="tablist" aria-orientation="vertical">
+                            
+                            <button class="nav-link active faq-tab-btn" id="tab-patients" data-bs-toggle="pill" data-bs-target="#content-patients" type="button" role="tab" aria-controls="content-patients" aria-selected="true">
+                                <i class="fa-regular fa-user tab-icon"></i>
+                                For Patients
+                            </button>
+                            
+                            <button class="nav-link faq-tab-btn" id="tab-safety" data-bs-toggle="pill" data-bs-target="#content-safety" type="button" role="tab" aria-controls="content-safety" aria-selected="false">
+                                <i class="fa-solid fa-shield-halved tab-icon"></i>
+                                Safety & Ethics
+                            </button>
+                            
+                            <button class="nav-link faq-tab-btn" id="tab-comp" data-bs-toggle="pill" data-bs-target="#content-comp" type="button" role="tab" aria-controls="content-comp" aria-selected="false">
+                                <i class="fa-solid fa-money-bill-wave tab-icon"></i>
+                                Compensation
+                            </button>
+                            
+                            <button class="nav-link faq-tab-btn" id="tab-sponsors" data-bs-toggle="pill" data-bs-target="#content-sponsors" type="button" role="tab" aria-controls="content-sponsors" aria-selected="false">
+                                <i class="fa-regular fa-building tab-icon"></i>
+                                For Sponsors
+                            </button>
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-                        <div class="accordion accordion_custom" id="faqAccordion">
+                            <button class="nav-link faq-tab-btn" id="tab-about" data-bs-toggle="pill" data-bs-target="#content-about" type="button" role="tab" aria-controls="content-about" aria-selected="false">
+                                <i class="fa-solid fa-circle-info tab-icon"></i>
+                                About Fruitful
+                            </button>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        1. What is a clinical trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        A clinical trial is a research study where new treatments, medications, or
-                                        medical devices are tested to evaluate their safety, effectiveness, and
-                                        potential benefits. Your participation helps advance healthcare for others.
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-left">
+                        <div class="tab-content faq-tab-content" id="faq-v-pills-tabContent">
+                            
+                            <div class="tab-pane fade show active" id="content-patients" role="tabpanel" aria-labelledby="tab-patients">
+                                <h3 class="faq-category-title">For Patients</h3>
+                                <div class="accordion custom-accordion" id="accordionPatients">
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat1">
+                                            <button class="custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat1" aria-expanded="true" aria-controls="collapsePat1">
+                                                What is a clinical trial and how does it work?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat1" class="accordion-collapse collapse show" aria-labelledby="headingPat1" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                A clinical trial is a research study that tests new medical treatments, drugs, or devices in real people. At Fruitful Clinical Research, every trial is carefully designed, FDA-regulated, and IRB-approved. You'll be guided through every step we believe bringing innovative therapies to our Las Vegas community and surrounding cities starts with ensuring participants feel fully informed and supported.
+                                            </div>
+                                        </div>
                                     </div>
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat2">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat2" aria-expanded="false" aria-controls="collapsePat2">
+                                                How do I know if I qualify for a study?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat2" class="accordion-collapse collapse" aria-labelledby="headingPat2" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                Each study has specific eligibility criteria, such as age, health condition, or medical history. Simply reach out to our team or complete a brief online registration form, and we'll guide you through the process with no obligation. There's no pressure or commitment at that stage.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat3">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat3" aria-expanded="false" aria-controls="collapsePat3">
+                                                Can I continue seeing my own doctor while in a trial?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat3" class="accordion-collapse collapse" aria-labelledby="headingPat3" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                Yes, absolutely. Participating in a clinical trial does not replace your regular medical care. We encourage you to continue seeing your physician and inform them of your participation. Our team can also communicate with your doctor as needed throughout the study.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat4">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat4" aria-expanded="false" aria-controls="collapsePat4">
+                                                How long do clinical trials last?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat4" class="accordion-collapse collapse" aria-labelledby="headingPat4" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                The duration varies depending on the study. Some trials involve only a few visits over a few weeks, while others may last several months or longer. Before enrolling, our team will clearly explain the timeline, number of visits, and what to expect at each stage.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat5">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat5" aria-expanded="false" aria-controls="collapsePat5">
+                                                What is a placebo and might I receive one?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat5" class="accordion-collapse collapse" aria-labelledby="headingPat5" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                A placebo is an inactive substance that looks identical to the study drug but contains no active ingredients. Some trials use placebos to measure the true effectiveness of a treatment. Whether a study includes a placebo and your chances of receiving one will always be clearly explained during the informed consent process.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat6">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat6" aria-expanded="false" aria-controls="collapsePat6">
+                                                How do I know if the study treatment actually works?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat6" class="accordion-collapse collapse" aria-labelledby="headingPat6" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                Clinical trials go through multiple phases before reaching participants. By the time a treatment reaches Phase II or III trials where most participants are involved it has already shown promise in earlier stages. Our team will explain the study phase and what is currently known about the treatment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingPat7">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePat7" aria-expanded="false" aria-controls="collapsePat7">
+                                                Can I leave a study once I've joined?
+                                            </button>
+                                        </h2>
+                                        <div id="collapsePat7" class="accordion-collapse collapse" aria-labelledby="headingPat7" data-bs-parent="#accordionPatients">
+                                            <div class="custom-accordion-body">
+                                                Yes. Participation is completely voluntary. You may withdraw from a study at any time, for any reason, without penalty or impact on your regular medical care. Your wellbeing always comes first — that is the Fruitful promise.
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        2. Who can participate in a clinical trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Healthy volunteers or have the specific medical condition being studied. Meet
-                                        certain age requirements. Fit other health criteria such as medical history,
-                                        medications, or previous treatments.
+                            <div class="tab-pane fade" id="content-safety" role="tabpanel" aria-labelledby="tab-safety">
+                                <h3 class="faq-category-title">Safety & Ethics</h3>
+                                <div class="accordion custom-accordion" id="accordionSafety">
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingSaf1">
+                                            <button class="custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaf1" aria-expanded="true" aria-controls="collapseSaf1">
+                                                Are Fruitful Clinical Research trials safe and properly regulated?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSaf1" class="accordion-collapse collapse show" aria-labelledby="headingSaf1" data-bs-parent="#accordionSafety">
+                                            <div class="custom-accordion-body">
+                                                Yes. All trials at Fruitful are FDA-regulated and reviewed by an independent Institutional Review Board (IRB), which ensures the safety, rights, and wellbeing of participants. Safety monitoring continues throughout the entire study.
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingSaf2">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaf2" aria-expanded="false" aria-controls="collapseSaf2">
+                                                What happens if I experience side effects during the trial?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSaf2" class="accordion-collapse collapse" aria-labelledby="headingSaf2" data-bs-parent="#accordionSafety">
+                                            <div class="custom-accordion-body">
+                                                Your safety is our top priority. If you experience any side effects, our medical team will assess and treat you promptly. All events are carefully documented and reported according to regulatory standards. You will always be supported.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingSaf3">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSaf3" aria-expanded="false" aria-controls="collapseSaf3">
+                                                What is informed consent?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSaf3" class="accordion-collapse collapse" aria-labelledby="headingSaf3" data-bs-parent="#accordionSafety">
+                                            <div class="custom-accordion-body">
+                                                Before joining any study, you will go through a detailed informed consent process. Our team explains the study purpose, procedures, risks, and your rights in clear, simple language. You'll have as much time as needed to ask questions before making a decision.
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        3. Is participating in a clinical trial safe?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        <p class="mb-2">Several safeguards are in place to help ensure participant
-                                            safety:</p>
-                                        <ul class="mb-0 ps-3">
-                                            <li class="mb-2">Trials must be reviewed and approved by an Institutional
-                                                Review Board (IRB), which ensures the study is ethical and that risks
-                                                are minimized.</li>
-                                            <li class="mb-2">Participants are carefully screened for eligibility before
-                                                joining a study.</li>
-                                            <li class="mb-2">A qualified physician and trained research staff monitor
-                                                participants throughout the study.</li>
-                                            <li>Participants receive detailed information about the study through an
-                                                Informed Consent document before deciding to participate.</li>
-                                        </ul>
+                            <div class="tab-pane fade" id="content-comp" role="tabpanel" aria-labelledby="tab-comp">
+                                <h3 class="faq-category-title">Compensation</h3>
+                                <div class="accordion custom-accordion" id="accordionComp">
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingComp1">
+                                            <button class="custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComp1" aria-expanded="true" aria-controls="collapseComp1">
+                                                Is there any cost to me as a participant?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseComp1" class="accordion-collapse collapse show" aria-labelledby="headingComp1" data-bs-parent="#accordionComp">
+                                            <div class="custom-accordion-body">
+                                                No. Study-related care, visits, and medications are always provided at no cost. At Fruitful Clinical Research, we believe access to innovative therapies should be free for our community.
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingComp2">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComp2" aria-expanded="false" aria-controls="collapseComp2">
+                                                Will I be compensated for my time and travel?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseComp2" class="accordion-collapse collapse" aria-labelledby="headingComp2" data-bs-parent="#accordionComp">
+                                            <div class="custom-accordion-body">
+                                                Many studies offer compensation for time, travel, and inconvenience. The specific details will be clearly explained during the informed consent process before you agree to participate.
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        4. How Do I know if I'm eligible to participate in a study?
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Fill out your contact information, and a member of our dedicated team will get
-                                        in touch to discuss your health condition and review the study's eligibility
-                                        criteria with you.
+                            <div class="tab-pane fade" id="content-sponsors" role="tabpanel" aria-labelledby="tab-sponsors">
+                                <h3 class="faq-category-title">For Sponsors</h3>
+                                <div class="accordion custom-accordion" id="accordionSponsor">
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingSpon1">
+                                            <button class="custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpon1" aria-expanded="true" aria-controls="collapseSpon1">
+                                                How do I submit a feasibility request to Fruitful Clinical Research?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSpon1" class="accordion-collapse collapse show" aria-labelledby="headingSpon1" data-bs-parent="#accordionSponsor">
+                                            <div class="custom-accordion-body">
+                                                You can reach out through our contact page or email our team directly. We'll respond promptly with a feasibility questionnaire and schedule a call to discuss your protocol, timelines, and patient needs.
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingSpon2">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpon2" aria-expanded="false" aria-controls="collapseSpon2">
+                                                What therapeutic areas does Fruitful currently support?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSpon2" class="accordion-collapse collapse" aria-labelledby="headingSpon2" data-bs-parent="#accordionSponsor">
+                                            <div class="custom-accordion-body">
+                                                We are currently accepting feasibility requests across multiple therapeutic areas. Contact our team to discuss your protocol, and we will provide an honest assessment of our capabilities and patient population fit.
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        5. Are there any cost to participate?
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        There is no cost to participate in the study.
+                            <div class="tab-pane fade" id="content-about" role="tabpanel" aria-labelledby="tab-about">
+                                <h3 class="faq-category-title">About Fruitful Clinical Research</h3>
+                                <div class="accordion custom-accordion" id="accordionAbout">
+                                    
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingAbo1">
+                                            <button class="custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbo1" aria-expanded="true" aria-controls="collapseAbo1">
+                                                Why is the site called Fruitful?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseAbo1" class="accordion-collapse collapse show" aria-labelledby="headingAbo1" data-bs-parent="#accordionAbout">
+                                            <div class="custom-accordion-body">
+                                                Our name reflects our mission. "Fruitful" represents something meaningful, nourishing, and impactful. We believe clinical research should bring real, lasting benefits to the community by delivering innovative therapies that truly make a difference.
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
-                                        aria-controls="collapseSix">
-                                        6. What happens after I sign up for a clinical Trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        After you sign up for a clinical trial, a member of the study team will contact
-                                        you to review your health information and answer any questions. You may then
-                                        attend a screening visit to see if you meet the study's eligibility
-                                        requirements. If eligible, you'll review and sign an informed consent form
-                                        explaining the study, its procedures, and potential risks. Once enrolled, you'll
-                                        attend scheduled visits, be closely monitored by research staff, and may have
-                                        follow-up visits after the study ends.
+                                    <div class="custom-accordion-item">
+                                        <h2 class="accordion-header" id="headingAbo2">
+                                            <button class="custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbo2" aria-expanded="false" aria-controls="collapseAbo2">
+                                                Where is Fruitful located and who do you serve?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseAbo2" class="accordion-collapse collapse" aria-labelledby="headingAbo2" data-bs-parent="#accordionAbout">
+                                            <div class="custom-accordion-body">
+                                                We are based in Las Vegas, Nevada, and proudly serve Las Vegas and surrounding cities. Our mission is to ensure patients in southern Nevada and surrounding cities have access to innovative therapies, regardless of their background.
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
-                                        aria-controls="collapseSeven">
-                                        7. Can I withdraw at any time?
-                                    </button>
-                                </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse"
-                                    aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Yes, you can withdraw from the study at any time without penalty, and it will
-                                        not affect your medical care.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingEight">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
-                                        aria-controls="collapseEight">
-                                        8. How will my personal information be protected?
-                                    </button>
-                                </h2>
-                                <div id="collapseEight" class="accordion-collapse collapse"
-                                    aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Your personal information will be kept confidential and secure. Only authorized
-                                        study staff will have access, and your data will be handled according to privacy
-                                        regulations and ethical guidelines to protect your identity.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingNine">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false"
-                                        aria-controls="collapseNine">
-                                        9. Will I receive the results of the trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Yes, you will be informed of the trial results once the study is completed and
-                                        the data has been analyzed.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTen">
-                                    <button class="accordion-button collapsed fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false"
-                                        aria-controls="collapseTen">
-                                        10. How can I get started?
-                                    </button>
-                                </h2>
-                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
-                                    data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body text_muted">
-                                        Fill out your contact information on the Current Studies page, and a member of
-                                        our dedicated team will get in touch with you.
-                                    </div>
                                 </div>
                             </div>
 
@@ -269,11 +339,69 @@
         </section>
     </main>
 
-    <footer class="footer_section">... (Keep your existing footer code here) ...</footer>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="assets/imgs/logo.svg" alt="Fruitful Logo">
+                        <p class="brand-kicker">Research today, better care tomorrow.</p>
+                        <p class="brand-description">Bringing fruitful and innovative therapies to Las Vegas and surrounding cities. Whether you're a patient ready to join a study or a sponsor seeking a dedicated Las Vegas site every step you take today helps build a healthier tomorrow.</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="footer-widget">
+                                <h5>QUICK LINKS</h5>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="sponsers.html">Sponsors & CROs</a></li>
+                                    <li><a href="faqs.html">FAQ Page</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="footer-widget">
+                                <h5>Contact Us</h5>
+                                <ul class="contact-list">
+                                    <li><a href="tel:702-600-3633"><i class="fa-solid fa-phone"></i> 702-600-3633</a></li>
+                                    <li><a href="mailto:info@fruitfulclinicalresearch.com"><i class="fa-regular fa-envelope"></i> info@fruitfulclinicalresearch.com</a></li>
+                                    <li><a href="http://www.fruitfulclinicalresearch.com/" target="_blank"><i class="fa-solid fa-globe"></i> http://www.fruitfulclinicalresearch.com/</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Fruitful Clinical Research. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top"> <i class="bi bi-arrow-up"></i> </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000 });</script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
-
 </html>
