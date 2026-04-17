@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <header class="site-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -30,7 +31,8 @@
                         <li class="nav-item"><a class="nav-link" href="studies.html">Studies</a></li>
                         <li class="nav-item"><a class="nav-link" href="sponsers.html">Sponsors & CROs</a></li>
                         <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact
+                                Us</a></li>
                     </ul>
                     <div class="nav-actions">
                         <a href="contact.html" class="btn-primary">Join a Study</a>
@@ -48,7 +50,9 @@
                         <div class="hero-content">
                             <span class="badge-pill">CONTACT US</span>
                             <h1 class="hero-title">Get in touch with<br>our <span class="highlight-red">team</span></h1>
-                            <p class="hero-description">Every great outcome starts with a conversation. Whether you're a patient ready to join a study or a sponsor exploring a partnership we're here to help your journey bear fruit.</p>
+                            <p class="hero-description">Every great outcome starts with a conversation. Whether you're a
+                                patient ready to join a study or a sponsor exploring a partnership we're here to help
+                                your journey bear fruit.</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6 col-sm-12" data-aos="fade-left">
@@ -64,27 +68,30 @@
             <div class="container">
                 <div class="row layout-gap">
                     <div class="col-lg-7" data-aos="fade-right">
-                        <form class="contact-form needs-validation" novalidate>
+                        <form id="contactForm" class="contact-form needs-validation" novalidate>
                             <div class="row form-row">
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">First Name</label>
-                                    <input type="text" class="form-control" placeholder="Jane" required>
+                                    <input type="text" name="first_name" class="form-control" placeholder="Jane"
+                                        required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Doe" required>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Doe" required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" placeholder="jane@example.com" required>
+                                    <input type="email" name="email" class="form-control" placeholder="jane@example.com"
+                                        required>
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" placeholder="(702) 000-0000" required>
+                                    <input type="tel" name="phone" class="form-control" placeholder="(702) 000-0000"
+                                        required>
                                 </div>
                                 <div class="col-12 form-group">
                                     <label class="form-label">I am a...</label>
-                                    <select class="form-select" required>
+                                    <select name="user_type" class="form-select" required>
                                         <option value="" disabled selected>Patient or caregiver</option>
                                         <option value="physician">Physician</option>
                                         <option value="referral">Referral</option>
@@ -94,13 +101,17 @@
                                 </div>
                                 <div class="col-12 form-group">
                                     <label class="form-label">How can we help?</label>
-                                    <textarea class="form-control" rows="5" placeholder="Tell us about your research needs..." required></textarea>
+                                    <textarea name="message" class="form-control" rows="5"
+                                        placeholder="Tell us about your research needs..." required></textarea>
                                 </div>
                                 <div class="col-12 form-submit-group">
-                                    <button type="submit" class="btn-primary btn-submit">
+                                    <button type="submit" class="btn-primary btn-submit" id="submitBtn">
                                         Send Message <i class="fa-regular fa-paper-plane"></i>
                                     </button>
-                                    <p class="form-disclaimer">By submitting this form you agree to be contacted by Fruitful Clinical Research. Your information is never shared with third parties.</p>
+                                    <p class="form-disclaimer">By submitting this form you agree to be contacted by
+                                        Fruitful Clinical Research. Your information is never shared with third parties.
+                                    </p>
+                                    <div id="formStatus" class="form-status" style="margin-top: 15px;"></div>
                                 </div>
                             </div>
                         </form>
@@ -108,14 +119,15 @@
 
                     <div class="col-lg-5" data-aos="fade-left">
                         <div class="contact-info-stack">
-                            
+
                             <div class="contact-mini-card">
                                 <div class="mini-icon-box bg-red-light color-red">
                                     <i class="fa-regular fa-envelope"></i>
                                 </div>
                                 <div class="mini-card-text">
                                     <h6>Email us</h6>
-                                    <a href="mailto:info@fruitfulclinicalresearch.com" class="color-red fw-bold">info@fruitfulclinicalresearch.com</a>
+                                    <a href="mailto:info@fruitfulclinicalresearch.com"
+                                        class="color-red fw-bold">info@fruitfulclinicalresearch.com</a>
                                 </div>
                             </div>
 
@@ -135,7 +147,8 @@
                                 </div>
                                 <div class="mini-card-text">
                                     <h6>Website Address</h6>
-                                    <a href="http://www.fruitfulclinicalresearch.com" class="fw-bold color-dark">www.fruitfulclinicalresearch.com</a>
+                                    <a href="http://www.fruitfulclinicalresearch.com"
+                                        class="fw-bold color-dark">www.fruitfulclinicalresearch.com</a>
                                 </div>
                             </div>
 
@@ -180,16 +193,19 @@
                     <div class="col-lg-6" data-aos="fade-up">
                         <div class="action-card seed-card">
                             <h3 class="color-green">Every conversation is a seed</h3>
-                            <p>At Fruitful Clinical Research, we believe every inquiry, no matter how small is the beginning of something meaningful. Reach out and let's grow something good together.</p>
+                            <p>At Fruitful Clinical Research, we believe every inquiry, no matter how small is the
+                                beginning of something meaningful. Reach out and let's grow something good together.</p>
                             <i class="fa-solid fa-leaf leaf-icon-bg"></i>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="action-card visit-card">
                             <h3>Visit our office</h3>
                             <h4 class="color-dark">Come see us in Las Vegas, NV</h4>
-                            <p>We're conveniently located in Las Vegas and welcome patients and sponsors to visit us in person. Our team is here to answer your questions, walk you through our facilities, and help you take the next step.</p>
+                            <p>We're conveniently located in Las Vegas and welcome patients and sponsors to visit us in
+                                person. Our team is here to answer your questions, walk you through our facilities, and
+                                help you take the next step.</p>
                             <span class="card-footer-italic">Research today, better care tomorrow.</span>
                         </div>
                     </div>
@@ -204,7 +220,8 @@
                     <div class="row strip-row">
                         <div class="col-lg-3 col-md-6 strip-item">
                             <h6>Website</h6>
-                            <a href="http://www.fruitfulclinicalresearch.com" class="color-red">www.fruitfulclinicalresearch.com</a>
+                            <a href="http://www.fruitfulclinicalresearch.com"
+                                class="color-red">www.fruitfulclinicalresearch.com</a>
                         </div>
                         <div class="col-lg-3 col-md-6 strip-item">
                             <h6>Serving</h6>
@@ -212,7 +229,8 @@
                         </div>
                         <div class="col-lg-3 col-md-6 strip-item">
                             <h6>Email us</h6>
-                            <a href="mailto:info@fruitfulclinicalresearch.com" class="color-red">info@fruitfulclinicalresearch.com</a>
+                            <a href="mailto:info@fruitfulclinicalresearch.com"
+                                class="color-red">info@fruitfulclinicalresearch.com</a>
                         </div>
                         <div class="col-lg-3 col-md-6 strip-item">
                             <h6>Call us</h6>
@@ -232,8 +250,10 @@
                     <div class="footer-brand">
                         <img src="assets/imgs/logo.svg" alt="Fruitful Logo">
                         <p class="brand-kicker">Research today, better care tomorrow.</p>
-                        <p class="brand-description">Bringing fruitful and innovative therapies to Las Vegas and surrounding cities. Whether you're a patient ready to join a study or a sponsor seeking a dedicated Las Vegas site every step you take today helps build a healthier tomorrow.</p>
-                        
+                        <p class="brand-description">Bringing Fruitful and innovative therapies to Las Vegas and
+                            surrounding cities. Whether you're a patient ready to join a study or a sponsor seeking a
+                            dedicated Las Vegas site every step you take today helps build a healthier tomorrow.</p>
+
                         <div class="social-links">
                             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -260,9 +280,14 @@
                             <div class="footer-widget">
                                 <h5>Contact Us</h5>
                                 <ul class="contact-list">
-                                    <li><a href="tel:702-600-3633"><i class="fa-solid fa-phone"></i> 702-600-3633</a></li>
-                                    <li><a href="mailto:info@fruitfulclinicalresearch.com"><i class="fa-regular fa-envelope"></i> info@fruitfulclinicalresearch.com</a></li>
-                                    <li><a href="http://www.fruitfulclinicalresearch.com/" target="_blank"><i class="fa-solid fa-globe"></i> http://www.fruitfulclinicalresearch.com/</a></li>
+                                    <li><a href="tel:702-600-3633"><i class="fa-solid fa-phone"></i> 702-600-3633</a>
+                                    </li>
+                                    <li><a href="mailto:info@fruitfulclinicalresearch.com"><i
+                                                class="fa-regular fa-envelope"></i>
+                                            info@fruitfulclinicalresearch.com</a></li>
+                                    <li><a href="http://www.fruitfulclinicalresearch.com" target="_blank"><i
+                                                class="fa-solid fa-globe"></i>
+                                            http://www.fruitfulclinicalresearch.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -283,11 +308,68 @@
     <button id="backToTop" aria-label="Back to top"> <i class="bi bi-arrow-up"></i> </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
     <script>
         AOS.init({ duration: 1000, once: true });
     </script>
+
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init({
+                publicKey: "3GDXsKrhnyFOIcN-W",
+            });
+        })();
+
+        // 3. Bootstrap Form Validation + EmailJS Integration (For contact page form)
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Check validity first
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                form.classList.add('was-validated');
+
+                // Only run EmailJS on the contact form
+                if (form.id !== 'contactForm') return;
+
+                const submitBtn = form.querySelector('#submitBtn');
+                const formStatus = form.querySelector('#formStatus');
+                const originalBtnContent = submitBtn.innerHTML;
+
+                // Loading state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+                formStatus.innerHTML = '';
+
+                // Send email via EmailJS
+                emailjs.sendForm('service_0irem5x', 'template_3uv7r5k', form)
+                    .then(() => {
+                        formStatus.innerHTML = '<div style="color: #155724; padding: 12px 16px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 6px; font-size: 14px;">✓ Thank you! Your message has been sent successfully. We\'ll get back to you shortly.</div>';
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    })
+                    .catch((error) => {
+                        formStatus.innerHTML = '<div style="color: #721c24; padding: 12px 16px; background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 6px; font-size: 14px;">✗ Oops! Something went wrong. Please try again or email us directly at info@fruitfulclinicalresearch.com</div>';
+                        console.error('EmailJS Error:', error);
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnContent;
+                    });
+            }, false);
+        });
+    </script>
 </body>
+
 </html>

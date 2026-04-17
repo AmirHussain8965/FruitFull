@@ -35,20 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 3. Bootstrap Form Validation (For contact page form)
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    const forms = document.querySelectorAll('.needs-validation');
-    
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            // Adds Bootstrap classes to show green checkmarks or red warnings
-            form.classList.add('was-validated');
-        }, false);
-    });
-
 });
