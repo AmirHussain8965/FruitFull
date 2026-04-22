@@ -33,7 +33,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
                     <div class="nav-actions">
-                        <a href="contact.html" class="btn-primary">Join a Study</a>
+                        <a href="studies.html" class="btn-primary">Join a Study</a>
                     </div>
                 </div>
             </nav>
@@ -177,7 +177,7 @@
                                     <div class="icon-box-red-small"><i class="fa-solid fa-check"></i></div>
                                     <div class="diff-text">
                                         <h5>Focused attention on your study</h5>
-                                        <p>As a new site, your trial gets our full attention not divided across a large portfolio.</p>
+                                        <p>Every trial gets our full attention and is not divided across a large portfolio.</p>
                                     </div>
                                 </div>
                                 <div class="diff-item">
@@ -374,9 +374,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
     <script>
-        AOS.init({ duration: 1000, once: true });
+        const isMobile = window.innerWidth < 768;
+
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        if (isMobile) {
+            document.querySelectorAll('[data-aos="fade-left"], [data-aos="fade-right"]')
+                .forEach(el => {
+                    el.setAttribute('data-aos', 'fade-up');
+                });
+        }
     </script>
 </body>
 </html> 

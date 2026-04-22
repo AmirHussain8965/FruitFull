@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
                     <div class="nav-actions">
-                        <a href="contact.html" class="btn-primary">Join a Study</a>
+                        <a href="studies.html" class="btn-primary">Join a Study</a>
                     </div>
                 </div>
             </nav>
@@ -526,7 +526,19 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        AOS.init({ duration: 1000, once: true });
+        const isMobile = window.innerWidth < 768;
+
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        if (isMobile) {
+            document.querySelectorAll('[data-aos="fade-left"], [data-aos="fade-right"]')
+                .forEach(el => {
+                    el.setAttribute('data-aos', 'fade-up');
+                });
+        }
     </script>
 </body>
 

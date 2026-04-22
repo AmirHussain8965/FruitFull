@@ -34,7 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
                     <div class="nav-actions">
-                        <a href="contact.html" class="btn-primary">Join a Study</a>
+                        <a href="studies.html" class="btn-primary">Join a Study</a>
                     </div>
                 </div>
             </nav>
@@ -78,7 +78,7 @@
                             
                             <p class="highlight-text-red">Research today, better care tomorrow.</p>
                             
-                            <p class="section-description">Every trial we open today is a seed. Every participant who joins is part of a harvest that will nourish patients for generations right here in Las Vegas Nevada and surrounding cities.</p>
+                            <p class="section-description">Every trial we open today is a seed. Every participant who joins is part of a harvest that will nourish patients for generations right here in Las Vegas Nevada.</p>
                         </div>
                     </div>
                 </div>
@@ -264,7 +264,19 @@
     <script src="assets/js/script.js"></script>
     
     <script>
-        AOS.init({ duration: 1000, once: true });
+        const isMobile = window.innerWidth < 768;
+
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        if (isMobile) {
+            document.querySelectorAll('[data-aos="fade-left"], [data-aos="fade-right"]')
+                .forEach(el => {
+                    el.setAttribute('data-aos', 'fade-up');
+                });
+        }
     </script>
 </body>
 </html>

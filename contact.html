@@ -35,7 +35,7 @@
                                 Us</a></li>
                     </ul>
                     <div class="nav-actions">
-                        <a href="contact.html" class="btn-primary">Join a Study</a>
+                        <a href="studies.html" class="btn-primary">Join a Study</a>
                     </div>
                 </div>
             </nav>
@@ -202,10 +202,8 @@
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="action-card visit-card">
                             <h3>Visit our office</h3>
-                            <h4 class="color-dark">Come see us in Las Vegas, NV</h4>
-                            <p>We're conveniently located in Las Vegas and welcome patients and sponsors to visit us in
-                                person. Our team is here to answer your questions, walk you through our facilities, and
-                                help you take the next step.</p>
+                            <h4 class="color-dark">Come see us in La        s Vegas, NV</h4>
+                            <p>We're conveniently located in Las Vegas Nevada and welcome patients and sponsors to visit us in person. Our team is here to answer your questions, walk you through our facilities, and help you take the next step.</p>
                             <span class="card-footer-italic">Research today, better care tomorrow.</span>
                         </div>
                     </div>
@@ -312,8 +310,21 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 
+
     <script>
-        AOS.init({ duration: 1000, once: true });
+        const isMobile = window.innerWidth < 768;
+
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        if (isMobile) {
+            document.querySelectorAll('[data-aos="fade-left"], [data-aos="fade-right"]')
+                .forEach(el => {
+                    el.setAttribute('data-aos', 'fade-up');
+                });
+        }
     </script>
 
     <script>
