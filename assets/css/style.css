@@ -1452,6 +1452,7 @@ h4, h5, h6 {
 
 .icon-box-red {
     width: 48px;
+    min-width: 48px;
     height: 48px;
     background-color: #FEE2E2;
     color: var(--c-primary-red);
@@ -1583,17 +1584,16 @@ h4, h5, h6 {
 .results-header {
     margin-bottom: 60px;
 }
-
-.results-list {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
 .result-item {
     display: flex;
-    gap: 24px;
+    gap: 15px;
     align-items: flex-start;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 185px;
 }
 
 .result-text h4 {
@@ -1602,7 +1602,7 @@ h4, h5, h6 {
 }
 
 .result-text p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
 }
@@ -1687,7 +1687,39 @@ h4, h5, h6 {
     background-color: var(--c-bg-light);
     padding: 80px 0 120px;
 }
-
+.faqs_sec_title{
+    width: 100%;
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+.faqs_sec_title h6{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #006E1C;
+}
+.faqs_sec_title h1{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #131B2E;
+    font-family: var(--f-family);
+}
+.faqs_sec_title p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #5B403D;
+}
 .layout-gap {
     gap: 0;
 }
@@ -1986,6 +2018,9 @@ h4, h5, h6 {
     text-decoration: none;
     word-break: break-all;
 }
+.mini-card-text .color-red{
+    color: var(--c-primary-red);
+}
 
 /* --- 5. Office Hours Card --- */
 .office-hours-card {
@@ -1997,6 +2032,7 @@ h4, h5, h6 {
 
 .office-hours-card .section-kicker {
     margin-bottom: 24px;
+    color: var(--c-primary-red);
 }
 
 .hours-list {
