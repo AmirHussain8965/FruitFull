@@ -823,7 +823,9 @@ h4, h5, h6 {
 .about-story .story-content {
     padding-left: 40px;
 }
-
+.about-story .story-content p{
+    font-size: 18px;
+}
 .about-story .highlight-text-red {
     color: var(--c-primary-red);
     font-weight: 700;
@@ -841,7 +843,9 @@ h4, h5, h6 {
     max-width: 800px;
     margin-bottom: 50px;
 }
-
+.about-foundation .foundation-header p{
+    font-size: 18px;
+}
 .foundation-card {
     border-radius: 24px;
     padding: 50px 40px;
@@ -894,7 +898,7 @@ h4, h5, h6 {
 }
 
 .foundation-card .card-text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     opacity: 0.9;
     margin-bottom: 30px;
@@ -945,7 +949,9 @@ h4, h5, h6 {
     max-width: 800px;
     margin: 0 auto 60px auto;
 }
-
+.about-values .values-header p{
+    font-size: 18px
+}
 .about-values .values-grid {
     margin-bottom: 60px;
 }
@@ -1008,13 +1014,13 @@ h4, h5, h6 {
 
 .info-cards-grid .dark-info-card h5 {
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
 .info-cards-grid .dark-info-card p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 15px;
+    font-size: 18px;
     margin: 0;
 }
 
@@ -1057,7 +1063,7 @@ h4, h5, h6 {
 }
 
 .studies-hero-v2 .hero-description {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.6;
     color: var(--c-text-muted);
     margin-bottom: 30px;
@@ -1163,7 +1169,7 @@ h4, h5, h6 {
 }
 
 .step-card p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
     color: var(--c-text-muted);
@@ -1231,7 +1237,7 @@ h4, h5, h6 {
 
 .safety-label {
     display: block;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--c-text-muted);
     margin-bottom: 8px;
@@ -1243,7 +1249,7 @@ h4, h5, h6 {
 }
 
 .safety-card p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
 }
@@ -1322,7 +1328,7 @@ h4, h5, h6 {
 
 .team-overlay p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.6;
     margin: 0;
 }
@@ -1388,7 +1394,7 @@ h4, h5, h6 {
 
 .feature-list-item ul li {
     position: relative;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--c-text-muted);
     line-height: 1.6;
     margin-bottom: 6px;
@@ -1420,7 +1426,7 @@ h4, h5, h6 {
 }
 
 .sponsors-capabilities .header-description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     margin: 0;
 }
@@ -1471,7 +1477,7 @@ h4, h5, h6 {
 }
 
 .capability-card p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
 }
@@ -1532,7 +1538,7 @@ h4, h5, h6 {
 }
 
 .diff-text p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     margin: 0;
 }
@@ -1547,7 +1553,7 @@ h4, h5, h6 {
 }
 
 .dark-info-card .card-kicker {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1736,7 +1742,7 @@ h4, h5, h6 {
     background-color: transparent !important;
     color: var(--c-text-muted) !important;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     padding: 16px 24px;
     border-radius: 12px !important;
     text-align: left;
@@ -1804,7 +1810,7 @@ h4, h5, h6 {
     width: 100%;
     background-color: #fff;
     color: var(--c-dark-blue);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     text-align: left;
     padding: 24px;
@@ -1840,9 +1846,10 @@ h4, h5, h6 {
 /* Accordion Body */
 .custom-accordion-body {
     padding: 0 24px 24px 24px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.7;
     color: var(--c-text-muted);
+    font-weight: 500;
 }
 
 /* ==========================================
